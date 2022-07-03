@@ -12,13 +12,28 @@ public class StreamExerciseApplication {
                 "Ali", "Davood", "Reza", "Mohsen");
 
 
+        System.out.println("part 1");
+        System.out.println();
+
         groupByLetters(names);
+
+        System.out.println("part 2");
+        System.out.println();
 
         groupByLettersAndPrintNumberOfNamesInGroup(names);
 
+        System.out.println("part 3");
+        System.out.println();
+
         meanValueWithLambda();
 
+        System.out.println("part 4");
+        System.out.println();
+
         checkStartAndEndSimilar();
+
+        System.out.println("part 5");
+        System.out.println();
 
         testCode();
 
