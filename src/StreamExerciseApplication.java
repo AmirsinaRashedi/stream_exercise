@@ -13,6 +13,15 @@ public class StreamExerciseApplication {
 
         groupByLetters(names);
 
+        groupByLettersAndPrintNumberOfNamesInGroup(names);
+
+    }
+
+    private static void groupByLettersAndPrintNumberOfNamesInGroup(List<String> names) {
+        Map<Integer, List<String>> lettersInName = names.stream()
+                .collect(groupingBy(String::length));
+
+        lettersInName.forEach((i, s) -> System.out.println(i + " " + s + " number of names= " + s.size()));
     }
 
     private static void groupByLetters(List<String> names) {
