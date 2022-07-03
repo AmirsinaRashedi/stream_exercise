@@ -69,6 +69,9 @@ public class StreamExerciseApplication {
 
             testWord = stringInput.nextLine();
 
+            if (testWord.isBlank())
+                throw new Exception();
+
         } catch (Exception e) {
 
             System.out.println("bad input");
