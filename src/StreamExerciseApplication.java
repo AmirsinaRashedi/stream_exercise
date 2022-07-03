@@ -20,7 +20,22 @@ public class StreamExerciseApplication {
 
         checkStartAndEndSimilar();
 
+        testCode();
 
+    }
+
+    private static void testCode() {
+        ArrayList<Integer> nums = new ArrayList<>();
+
+        nums.add(3);
+
+        nums.add(5);
+
+        nums.add(1);
+
+        nums.stream()
+                .filter(val -> val > 1)
+                .forEach(val -> System.out.println(val));
     }
 
     private static void checkStartAndEndSimilar() {
