@@ -1,5 +1,6 @@
 import java.util.*;
 import java.util.function.BiConsumer;
+import java.util.function.Predicate;
 
 import static java.util.stream.Collectors.groupingBy;
 
@@ -17,6 +18,33 @@ public class StreamExerciseApplication {
 
         meanValueWithLambda();
 
+        checkStartAndEndSimilar();
+
+
+    }
+
+    private static void checkStartAndEndSimilar() {
+        System.out.println("enter a word:");
+
+        Scanner stringInput = new Scanner(System.in);
+
+        String testWord;
+
+        try {
+
+            testWord = stringInput.nextLine();
+
+        } catch (Exception e) {
+
+            System.out.println("bad input");
+
+            return;
+
+        }
+
+        Predicate<String> checkStartAndEnd = (s) -> s.charAt(0) == s.charAt(s.length() - 1);
+
+        System.out.println(checkStartAndEnd.test(testWord));
     }
 
     private static void meanValueWithLambda() {
